@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- These must come FIRST in the head. Everything else after-->
+
+        <!-- Required Meta Tags -->
+        <meta charset="utf-8"/>
+        <!-- Ensures proper rendering and touch-zooming for all devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+        <!-- End prioritization -->
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon"/>
+
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
+        <!-- My Stylesheet -->
+        <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mycss.css') }}"/>-->
+
+        <!-- Javascript -->
+        <!-- Empty for now -->
+        <!-- Change the title of the page depending on what's being displayed -->
+        {% block j_title %}
+        <title>Placeholder title</title>
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Footer - Consistent across all pages-->
+        <footer class="footer">
+            <hr>
+            <div class="container text-center">
+                <p>
+                    --Team Rainbow Unicorn Barf
+                    <!-- Script to display the Current Year -->
+                    <script language="JavaScript" type="text/javascript">
+                        now = new Date
+                        theYear = now.getYear()
+                        if (theYear < 1900)
+                            theYear = theYear + 1900
+                        document.write(theYear)
+                    </script>
+                    --
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
