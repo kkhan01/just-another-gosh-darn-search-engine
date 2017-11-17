@@ -1,1 +1,37 @@
 {% extends 'frame.html' %}
+
+{% block content %}
+<!-- Page Header -->
+<header class="masthead" style="background-color: black;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <div id="logo">
+                        <form action="{{ url_for('route_root') }}">
+                            <button type="submit" id="logo-a"></button>
+                        </form>
+                    </div>
+                    <span class="subheading">
+                        <!-- Temp - needs changing -->
+                        <form id="search-form" action="{{ url_for('route_root') }}">
+                            <input type="text" class="form-control" placeholder="Enter search here..." id="search-term" name="search-term" required/>
+                            <div class="form-group">
+                                <label for="search-dest">Search Destination: </label>
+                                <select class="form-control" id="search-dest" name="search-dest">
+                                    <option value="google">Google</option>
+                                    <option value="tastedive">Tastedive</option>
+                                    <option value="google-images">Images</option>
+                                    <option value="youtube">YouTube</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success">Search!</button>
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
