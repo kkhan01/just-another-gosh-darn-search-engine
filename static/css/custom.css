@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
 }
 
 hr {
@@ -8,6 +8,7 @@ hr {
 
 footer {
     color: white;
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
 }
 
 #logo {
@@ -30,14 +31,25 @@ footer {
 }
 
 #search-dest {
+    display: inline-block;
     width: 150px;
     text-align: center;
     margin: auto;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
 label {    
     clear: both;
-    float: left;
+    display: inline-block;
     margin-right: 15px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.45);
 }
