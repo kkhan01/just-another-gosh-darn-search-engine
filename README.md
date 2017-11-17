@@ -1,2 +1,1 @@
-# rec-your-footprint
-Gives you reccomendations based on your internet footprint
+![Another Gosh Darn Search Engine](https://i.imgur.com/Hw9NqcJ.png)
