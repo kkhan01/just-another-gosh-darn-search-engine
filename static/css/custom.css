@@ -1,5 +1,9 @@
-header.masthead {
+header.masthead#home {
     background-image: url(../img/home-img.jpg);
+}
+
+header.masthead#about {
+    background-image: url(../img/about-img.png);
 }
 
 hr {
@@ -53,3 +57,46 @@ label {
     width: 100%;
     background-color: rgba(5, 5, 5, 0.45);
 }
+
+.rainbowify {
+    /* Chrome, Safari, Opera */
+   -webkit-animation: rainbow 5s infinite; 
+   
+   /* Internet Explorer */
+   -ms-animation: rainbow 5s infinite;
+   
+   /* Standar Syntax */
+   animation: rainbow 5s infinite; 
+ }
+ 
+ /* Chrome, Safari, Opera */
+ @-webkit-keyframes rainbow{	
+     0%{color: red};
+     20%{color: orange;}
+     40%{color: yellow;}
+     60%{color: green;}
+     80%{color: blue;}
+     90%{color: violet;}
+     100%{color: red;}	
+ }
+ /* Internet Explorer */
+ @-ms-keyframes rainbow{
+    0%{color: red};
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: green;}
+    80%{color: blue;}
+    90%{color: violet;}	
+    100%{color: red;}
+ }
+ 
+ /* Standar Syntax */
+ @keyframes rainbow{
+    0%{color: red};
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: green;}
+    80%{color: blue;}
+    90%{color: violet;}	
+    100%{color: red;}
+ }
