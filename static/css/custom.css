@@ -1,5 +1,5 @@
-body {
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+header.masthead {
+    background-image: url(../img/home-img.jpg);
 }
 
 hr {
@@ -8,7 +8,7 @@ hr {
 
 footer {
     color: white;
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    /*background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);*/
 }
 
 #logo {
