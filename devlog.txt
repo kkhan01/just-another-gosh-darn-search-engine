@@ -22,3 +22,6 @@ added rest of the search methods
 -e linK -- 2017-11-27 14:14:59
 Updated README & made temp logo
 
+-e linK -- 2017-11-27 14:45:28
+Updated design document
+
