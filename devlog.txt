@@ -7,9 +7,15 @@ second test
 soeW -- 2017-11-21 14:48:50
 Created document with apikeys with quick references for group use.
 
+yuqiW -- 2017-11-21 14:50:03
+added search method for youtube
+
 khinshanK -- 2017-11-22 14:23:09
 quick fix of routes + moved / info into /
 
 khinshanK -- 2017-11-22 15:04:22
 made initial coloring of logo, needs to be 'stroked' by creator
+
+yuqiW -- 2017-11-26 20:50:48
+added rest of the search methods
 
