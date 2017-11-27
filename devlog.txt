@@ -19,3 +19,9 @@ made initial coloring of logo, needs to be 'stroked' by creator
 yuqiW -- 2017-11-26 20:50:48
 added rest of the search methods
 
+-e linK -- 2017-11-27 14:14:59
+Updated README & made temp logo
+
+-e linK -- 2017-11-27 14:45:28
+Updated design document
+

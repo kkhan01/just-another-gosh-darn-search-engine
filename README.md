@@ -26,6 +26,13 @@ you can enter a search term and select where you want your search query to go.
 * ability to input well written search terms
 * a sense humor
 
+#### APIs:
+
+* Tastedive API (Tastedive Reccomendations)
+* Google Custom Search API (Web Results)
+* YouTube API (Video Results)
+* News API (News Article Results)
+
 #### External Stuff Used:
 
 * Bootstrap
