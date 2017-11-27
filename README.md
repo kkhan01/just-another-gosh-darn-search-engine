@@ -9,11 +9,13 @@ you can enter a search term and select where you want your search query to go.
 1. Navigate to the root folder of our project in the terminal
 2. Enter the command `python run.py` (assuming you have all the prerequisites already installed).
 3. In your web browser, navigate to the `localhost:5000` url.
-4. In the search query input, input your desired search query.
+4. In the search query input, input your desired seaitrch query.
 5. Select your desired search destination from the search destination input.
 6. Click search!
 7. ???
 8. Profit
+
+## Components:
 
 #### Dependencies:
 
@@ -24,7 +26,7 @@ you can enter a search term and select where you want your search query to go.
 * ability to input well written search terms
 * a sense humor
 
-#### Components Used:
+#### External Stuff Used:
 
 * Bootstrap
 * Fontawesome Icons
