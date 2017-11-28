@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+
+{% block r_google %}
+<!--
+0: title
+1: description
+2: url 
+-->
+{{for i in results}}
+<a href={{i[2]}}> {{i[0]}} </a>
+<glink>{{i[2]}}</glink>
+<gtext>{{i[1]}}</gtext>
+{% endfor %}
+
+{% endblock %}
