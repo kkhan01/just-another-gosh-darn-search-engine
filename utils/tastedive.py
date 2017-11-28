@@ -1,8 +1,12 @@
-from flask import Flask, render_template, session, redirect, url_for, request, flash
+import requests
+import csv
 
-def tastedive_search(search):
+def search(search):
     with open ('api_keys.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         key = reader['TasteDive']
-    return "https://tastedive.com/api/similar?k=%s&q=%s" % (key, search)
+        api_url = "https://tastedive.com/api/similar"
+        payload = {'k' : key, 'q' : search}
+        r = requests.get(api_url, params = payload)
+        return r.json()
 

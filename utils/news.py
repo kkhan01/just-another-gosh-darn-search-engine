@@ -1,12 +1,11 @@
+import requests
 import csv
 
 def search(search):
     with open ('api_keys.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         key = reader['News']
-    dictionary = "https://newsapi.org/v2/top-headlines?apiKey=%s&sources=%s" % (key, search)
-    ret = []
-    for news in dictionary:
-        sub = [news['title'], news['description'], news['url']]
-        ret.append(sub)
-    return ret
+    api_url = "https://newsapi.org/v2/everything"
+    payload = {'key' : key, 'q' : search}
+    r = requests.get(api_url, params = payload)
+    return r.json()
