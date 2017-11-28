@@ -1,10 +1,15 @@
-from flask import Flask, render_template, session, redirect, url_for, request, flash
+import csv
+import requests
 
-def google_search(search):
+def search(search):
     with open ('api_keys.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         key = reader['Google']
-    dictionary = "http://www.google.com/customsearch/v1?key=%s&cx=001172072688314740745:fwbcfymikgm&q=%s" % (key, search)
+    api_url = "http://www.google.com/customsearch/v1?"
+    payload = { 'key' : key,
+                'cx' : '001172072688314740745:fwbcfymikgm',
+                'q' : search}
+    dictionary = requests.get(api_url, params=payload)
     ret = []
     for thing in dictionary:
         items = result['items']

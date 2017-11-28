@@ -1,5 +1,6 @@
 import urllib
 import jinja2
+import csv
 
 from apiclient.discovery import build
 from optparse import OptionParser
@@ -18,7 +19,7 @@ YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 app = Flask(__name__)
 
-def youtube_search(search):
+def search(search):
     youtube = build(
         YOUTUBE_API_SERVICE_NAME, 
         YOUTUBE_API_VERSION, 
