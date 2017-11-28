@@ -1,4 +1,4 @@
-![Another Gosh Darn Search Engine](https://i.imgur.com/Hw9NqcJ.png)
+![Another Gosh Darn Search Engine](https://i.imgur.com/8OnBHxT.png)
 
 ## Overview:
 Just Another Gosh Darn Search Engine - JAGDSE for short - is a search engine frontend interface where
