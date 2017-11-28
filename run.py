@@ -4,17 +4,6 @@ run = Flask(__name__)
 
 @run.route('/')
 def route_root():
-    '''
-    type = request.form["search-dest"]
-    search = request.form["search-term"]
-    if type == 'google':
-        u = urllib2.urlopen('http://www.freegeoip.net/json/%s' % website)
-        data_string = u.read()
-        d = json.loads(data_string)
-    if type == 'tastedive':
-    if type == 'youtube':
-    if type == 'news':
-    '''
     return render_template('home.html')
 
 @run.route('/about')
@@ -23,11 +12,29 @@ def route_about():
 
 @run.route('/getresults')
 def route_getresults():
-    return render_template('home.html')
+    search_type = request.form["search-dest"]
+    search = request.form["search-term"]
+    ret = []
+    if search_type == 'google':
+        ret = google.search(search)
+    if search_type == 'tastedive':
+        ret = tastedive.search(search)
+    if search_type == 'youtube':
+        ret = youtube.search(search)
+    if search_type == 'news':
+        ret = news.search(search)
+    return redirect( url_for(route_results) , result = ret, search_type = search_type)
 
 @run.route('/results')
 def route_results():
-    return render_template('home.html')
+    if search_type == 'google':
+        return render_template('google.html', result = result)
+    if search_type == 'tastedive':
+        return render_template('tastedive.html', result = result)
+    if search_type == 'youtube':
+        return render_template('youtube.html', result = result)
+    if search_type == 'news':
+        return render_template('news.html', result = result)
 
 if __name__ == "__main__":
     run.debug = True

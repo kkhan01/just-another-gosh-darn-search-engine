@@ -1,6 +1,6 @@
-from flask import Flask, render_template, session, redirect, url_for, request, flash
+import csv
 
-def google_search(search):
+def search(search):
     with open ('api_keys.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         key = reader['Google']
