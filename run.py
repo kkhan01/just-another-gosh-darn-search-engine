@@ -5,12 +5,15 @@ run = Flask(__name__)
 @run.route('/')
 def route_root():
     '''
-    type = request.form["type"]
-    search = request.form["search"]
+    type = request.form["search-dest"]
+    search = request.form["search-term"]
     if type == 'google':
         u = urllib2.urlopen('http://www.freegeoip.net/json/%s' % website)
         data_string = u.read()
         d = json.loads(data_string)
+    if type == 'tastedive':
+    if type == 'youtube':
+    if type == 'news':
     '''
     return render_template('home.html')
 
