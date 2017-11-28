@@ -25,3 +25,6 @@ Updated README & made temp logo
 -e linK -- 2017-11-27 14:45:28
 Updated design document
 
+-e linK -- 2017-11-28 09:34:32
+Added getresults and results routes
+

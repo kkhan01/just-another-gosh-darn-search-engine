@@ -21,6 +21,14 @@ def route_root():
 def route_about():
     return render_template('about.html')
 
+@run.route('/getresults')
+def route_getresults():
+    return render_template('home.html')
+
+@run.route('/results')
+def route_results():
+    return render_template('home.html')
+
 if __name__ == "__main__":
     run.debug = True
     run.run()
