@@ -2,10 +2,21 @@
 
 {% block r_youtube %}
 {% for i in results %}
-<span class="gtitle"><h3><a href={{i['url']}}> {{i['title']}} </a></h3></span>
-<p><glink>{{i['url']}}</glink></p>
-<p><gtext>{{i['description']}}</gtext></p>
-<!-- NEEDS A NEW-Y FORMAT -->
+<span class="gtitle">
+  <h2>
+    <a href={{i['url']}}>{{i['title']}}</a>
+  </h2>
+</span>
+
+<h6>
+  <glink>{{i['url']}}</glink>
+</h6>
+
+<h6><gtext>{{i['description']}}</gtext>
+</h6>
+<br />
 
 {% endfor %}
+
 {% endblock %}
+

@@ -105,6 +105,7 @@ label {
 .gtitle, .gtitle a{
     color: #1A0DAB;
     /*font-size:9px;*/
+    margin: 0;
 }
 
 glink{
