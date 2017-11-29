@@ -16,5 +16,11 @@ def google_search(search):
     r = requests.get(api_url, params=payload)
     r = r.json()
     ret = []
-    return r
+    for result in r['items']:
+        sub = {}
+        sub['title'] = result['title']
+        sub['description'] = result['snippet']
+        sub['url'] = result['link']
+        ret.append(sub)
+    return ret
 
