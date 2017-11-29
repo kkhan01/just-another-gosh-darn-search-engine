@@ -8,7 +8,7 @@ you can enter a search term and select where you want your search query to go.
 
 #### API key file instructions:
 
-1. Check your email for a file from 'klin12@stuy.edu' with the subject title `API Key for JAGDSE`
+1. Check your email for a file from `klin12@stuy.edu`
 2. Download the API key csv file
 3. Place the API key csv file in the root directory of this project (`./just-another-gosh-darn-search-engine`)
 4. You're set to run the project
