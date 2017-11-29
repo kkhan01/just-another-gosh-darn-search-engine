@@ -1,7 +1,7 @@
 {% extends 'home.html' %}
 
 {% block r_youtube %}
-
+<h3 class="result-header">YouTube</h3>
 {% for i in results %}
 <span class="gtitle">
   <h2>
@@ -16,7 +16,6 @@
 <h6><gtext>{{i['description']}}</gtext>
 </h6>
 <br />
-
 {% endfor %}
 
 {% endblock %}
