@@ -16,7 +16,7 @@ def tastedive_search(search):
     ret = []
     for suggestion in r['Similar']['Results']:
         sub = {}
-        url = "www.google.com/search?q=%s" % suggestion['Name']
+        url = "https://www.google.com/search?q=%s" % suggestion['Name']
         sub['title'] = suggestion['Name']
         sub['description'] = suggestion['Name'] + ' is a ' + suggestion['Type']
         sub['url'] = url
