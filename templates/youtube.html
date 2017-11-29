@@ -1,22 +1,25 @@
 {% extends 'home.html' %}
 
 {% block r_youtube %}
-<h3 class="result-header">YouTube</h3>
-{% for i in results %}
-<span class="gtitle">
-  <h2>
-    <a href={{i['url']}}>{{i['title']}}</a>
-  </h2>
-</span>
+<div class="result-content">
+  <h3 class="result-header">YouTube</h3>
+  {% for i in results %}
+  <div class="result-item">
+    <span class="gtitle">
+      <h2>
+        <a href={{i['url']}}>{{i['title']}}</a>
+      </h2>
+    </span>
 
-<h6>
-  <glink>{{i['url']}}</glink>
-</h6>
+    <h6>
+      <glink>{{i['url']}}</glink>
+    </h6>
 
-<h6><gtext>{{i['description']}}</gtext>
-</h6>
-<br />
-{% endfor %}
-
+    <h6>
+      <gtext>{{i['description']}}</gtext>
+    </h6>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
 

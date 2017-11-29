@@ -1,15 +1,24 @@
 {% extends 'home.html' %}
 
 {% block r_google %}
-<!--
-    0: title
-    1: description
-    2: url 
-  -->
-<h3 class="result-header">Google</h3>
-{% for i in results %}
-<span class="gtitle"><h3><a href={{i['2']}}> {{i['0']}} </a></h3></span>
-<p><glink>{{i['2']}}</glink></p>
-<p><gtext>{{i['1']}}</gtext></p>
-{% endfor %}
+<div class="result-content">
+  <h3 class="result-header">Google</h3>
+  {% for i in results %}
+  <div class="result-item">
+    <span class="gtitle">
+      <h2>
+        <a href={{i['url']}}>{{i['title']}}</a>
+      </h2>
+    </span>
+
+    <h6>
+      <glink>{{i['url']}}</glink>
+    </h6>
+
+    <h6>
+      <gtext>{{i['description']}}</gtext>
+    </h6>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

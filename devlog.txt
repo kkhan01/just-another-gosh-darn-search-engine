@@ -61,3 +61,6 @@ news format mmay follow google for now. need routes working, but im majorly conf
 khinshanK -- 2017-11-29 02:01:47
 almost done. we have a minor link problem with some apis. the linke it perfect, just not http sometimes, which makes it think it's still in the app
 
+linK -- 2017-11-29 07:41:28
+Cleaned up directory
+

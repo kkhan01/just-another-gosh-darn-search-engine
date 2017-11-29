@@ -26,17 +26,18 @@ def route_getresults():
         ret = youtube.youtube_search(search)
     if search_type == 'news':
         ret = news.news_search(search)
+    session.pop('result', None)
     session['result'] = ret
+    session.pop('search_type', None)
     session['search_type'] = search_type
     return redirect(url_for('route_results'))
  
 @run.route('/results')
 def route_results():
     result = session['result']
-    session.pop('result', None)
     search_type = session['search_type']
-    session.pop('search_type', None)
-    return render_template('youtube.html', results = result)
+    search_type = search_type + '.html'
+    return render_template(search_type, results = result)
 
 if __name__ == "__main__":
     run.debug = True

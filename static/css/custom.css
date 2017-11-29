@@ -117,3 +117,17 @@ gtext{
     color: #595454;
     /*font-size:9px;*/
 }
+
+.result-header {
+    padding-bottom: 42px;
+    font-size: 50px;
+}
+
+.result-content {
+    padding-left: 10%;
+    max-width: 90%;
+}
+
+.result-item {
+    padding-bottom: 27px;
+}
