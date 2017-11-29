@@ -11,10 +11,10 @@ def google_search(search):
             use_key = key
     api_url = 'https://www.googleapis.com/customsearch/v1'
     payload = { 'key' : use_key,
-                'cx' : open('cx.txt','r'),
+                'cx' : '010390897743961887314:_eewyuhlo4w',
                 'q' : search}
     r = requests.get(api_url, params=payload)
     r = r.json()
     ret = []
     return r
->>>>>>> c88309bf0fe3ad24ca0bf76ebc0baba917989980
+
