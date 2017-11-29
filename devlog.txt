@@ -43,3 +43,6 @@ Updated Search Destinations
 khinshanK -- 2017-11-28 19:27:59
 made a google-esque format
 
+khinshanK -- 2017-11-29 00:01:04
+news format mmay follow google for now. need routes working, but im majorly confused
+

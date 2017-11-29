@@ -1,5 +1,5 @@
 from flask import Flask, render_template, session, redirect, url_for, request, flash
-
+from utils import news
 run = Flask(__name__)
 
 @run.route('/')
@@ -12,8 +12,8 @@ def route_about():
 
 @run.route('/getresults')
 def route_getresults():
-    search_type = request.form["search-dest"]
-    search = request.form["search-term"]
+    search_type = request.args["search-dest"]
+    search = request.args["search-term"]
     ret = []
     if search_type == 'google':
         ret = google.google_search(search)

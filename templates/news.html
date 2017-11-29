@@ -1,13 +1,11 @@
 {% extends 'home.html' %}
 
 {% block r_google %}
-<!--
-0: title
-1: description
-2: url 
--->
-{{for i in results}}
 
+{% for i in results %}
+<span class="gtitle"> <a href={{i['url']}}> {{i['title']}} </a> </span>
+<glink>{{i['url']}}</glink>
+<gtext>{{i['description']}}</gtext>
 <!-- NEEDS A NEW-Y FORMAT -->
 
 {% endfor %}
