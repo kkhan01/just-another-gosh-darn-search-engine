@@ -18,7 +18,6 @@
             </form>
           </div>
           <span class="subheading">
-            <!-- Temp - needs changing -->
             <form id="search-form" action="/getresults">
               <input type="text" class="form-control" placeholder="Enter search here..." id="search-term" name="search-term" required/>
               <div class="form-group">
@@ -38,4 +37,15 @@
     </div>
   </div>
 </header>
+{% endblock %}
+
+{% block content %}
+{% block r_tastedive %}
+{% endblock %}
+{% block r_google %}
+{% endblock %}
+{% block r_youtube %}
+{% endblock %}
+{% block r_news %}
+{% endblock %}
 {% endblock %}
