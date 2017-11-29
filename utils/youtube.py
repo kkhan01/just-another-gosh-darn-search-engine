@@ -21,7 +21,7 @@ def youtube_search(search):
     ret = []
     for video in result['items']:
         sub = {}
-        url = 'www.youtube.com/watch?v=' + video['id']['videoId']
+        url = 'https://www.youtube.com/watch?v=' + video['id']['videoId']
         sub['title'] = video['snippet']['title']
         sub['description'] = video['snippet']['description']
         sub['url'] = url

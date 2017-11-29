@@ -21,6 +21,11 @@ def tastedive_search(search):
         sub['description'] = suggestion['Name'] + ' is a ' + suggestion['Type']
         sub['url'] = url
         ret.append(sub)
+    if len(ret) == 0:
+        sub = {}
+        sub['title'] = "Sorry, I haven't heard of " + search
+        sub['description'] = "Please don't click the link. Move on to your next search."
+        ret.append(sub)
     return ret
         
 
