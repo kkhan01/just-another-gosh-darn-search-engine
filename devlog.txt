@@ -40,3 +40,6 @@ Updated design document
 -e linK -- 2017-11-28 14:20:41
 Updated Search Destinations
 
+khinshanK -- 2017-11-28 19:27:59
+made a google-esque format
+

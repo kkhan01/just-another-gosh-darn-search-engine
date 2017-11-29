@@ -101,3 +101,15 @@ label {
     90%{color: violet;}	
     100%{color: red;}
  }
+
+ gtitle{
+     color: #1A0DAB;
+ }
+
+ glink{
+     color: #006621;
+ }
+
+ gtext{
+     color: #595454;
+ }
