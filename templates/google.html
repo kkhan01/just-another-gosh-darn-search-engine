@@ -2,14 +2,12 @@
 
 {% block r_google %}
 <!--
-0: title
-1: description
-2: url 
--->
+    0: title
+    1: description
+    2: url 
+  -->
 {{for i in results}}
-<gtitle>
-  <a href={{i[2]}}> {{i[0]}} </a>
-</gtitle>
+<span class="gtitle"> <a href={{i[2]}}> {{i[0]}} </a> </span>
 <glink>{{i[2]}}</glink>
 <gtext>{{i[1]}}</gtext>
 {% endfor %}

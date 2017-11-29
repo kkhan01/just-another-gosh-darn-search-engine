@@ -61,27 +61,27 @@ label {
 
 .rainbowify {
     /* Chrome, Safari, Opera */
-   -webkit-animation: rainbow 5s infinite; 
-   
-   /* Internet Explorer */
-   -ms-animation: rainbow 5s infinite;
-   
-   /* Standar Syntax */
-   animation: rainbow 5s infinite; 
- }
- 
- /* Chrome, Safari, Opera */
- @-webkit-keyframes rainbow{	
-     0%{color: red};
-     20%{color: orange;}
-     40%{color: yellow;}
-     60%{color: green;}
-     80%{color: blue;}
-     90%{color: violet;}
-     100%{color: red;}	
- }
- /* Internet Explorer */
- @-ms-keyframes rainbow{
+    -webkit-animation: rainbow 5s infinite; 
+    
+    /* Internet Explorer */
+    -ms-animation: rainbow 5s infinite;
+    
+    /* Standar Syntax */
+    animation: rainbow 5s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{	
+    0%{color: red};
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: green;}
+    80%{color: blue;}
+    90%{color: violet;}
+    100%{color: red;}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
     0%{color: red};
     20%{color: orange;}
     40%{color: yellow;}
@@ -89,10 +89,10 @@ label {
     80%{color: blue;}
     90%{color: violet;}	
     100%{color: red;}
- }
- 
- /* Standar Syntax */
- @keyframes rainbow{
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
     0%{color: red};
     20%{color: orange;}
     40%{color: yellow;}
@@ -100,16 +100,19 @@ label {
     80%{color: blue;}
     90%{color: violet;}	
     100%{color: red;}
- }
+}
 
- gtitle{
-     color: #1A0DAB;
- }
+.gtitle, .gtitle a{
+    color: #1A0DAB;
+    /*font-size:9px;*/
+}
 
- glink{
-     color: #006621;
- }
+glink{
+    color: #006621;
+    /*font-size:9px;*/
+}
 
- gtext{
-     color: #595454;
- }
+gtext{
+    color: #595454;
+    /*font-size:9px;*/
+}
