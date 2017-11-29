@@ -16,25 +16,25 @@ def route_getresults():
     search = request.form["search-term"]
     ret = []
     if search_type == 'google':
-        ret = google.search(search)
+        ret = google.google_search(search)
     if search_type == 'tastedive':
-        ret = tastedive.search(search)
+        ret = tastedive.tastedive_search(search)
     if search_type == 'youtube':
-        ret = youtube.search(search)
+        ret = youtube.youtube_search(search)
     if search_type == 'news':
-        ret = news.search(search)
+        ret = news.news_search(search)
     return redirect( url_for(route_results) , result = ret, search_type = search_type)
 
 @run.route('/results')
 def route_results():
     if search_type == 'google':
-        return render_template('google.html', result = result)
+        return render_template('google.html', results = result)
     if search_type == 'tastedive':
-        return render_template('tastedive.html', result = result)
+        return render_template('tastedive.html', results = result)
     if search_type == 'youtube':
-        return render_template('youtube.html', result = result)
+        return render_template('youtube.html', results = result)
     if search_type == 'news':
-        return render_template('news.html', result = result)
+        return render_template('news.html', results = result)
 
 if __name__ == "__main__":
     run.debug = True
