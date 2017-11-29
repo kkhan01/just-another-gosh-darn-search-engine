@@ -1,5 +1,5 @@
 from flask import Flask, render_template, session, redirect, url_for, request, flash
-from utils import news
+from utils import tastedive, google, youtube, news
 run = Flask(__name__)
 
 @run.route('/')
@@ -12,8 +12,8 @@ def route_about():
 
 @run.route('/getresults')
 def route_getresults():
-    search_type = request.args["search-dest"]
-    search = request.args["search-term"]
+    search_type = request.form["search-dest"]
+    search = request.form["search-term"]
     ret = []
     if search_type == 'google':
         ret = google.google_search(search)
@@ -23,10 +23,16 @@ def route_getresults():
         ret = youtube.youtube_search(search)
     if search_type == 'news':
         ret = news.news_search(search)
-    return redirect( url_for(route_results) , result = ret, search_type = search_type)
-
+    session['result'] = ret
+    session['search_type'] = search_type
+    return redirect(url_for(route_results))
+ 
 @run.route('/results')
 def route_results():
+    result = session['result']
+    session.pop('result', None)
+    search_type = session['search_type']
+    session.pop('search_type', None)
     if search_type == 'google':
         return render_template('google.html', results = result)
     if search_type == 'tastedive':
