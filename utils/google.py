@@ -11,7 +11,7 @@ def google_search(search):
             use_key = key
     api_url = 'https://www.googleapis.com/customsearch/v1'
     payload = { 'key' : use_key,
-                'cx' : '001172072688314740745:fwbcfymikgm',
+                'cx' : open('cx.txt','r'),
                 'q' : search}
     r = requests.get(api_url, params=payload)
     r = r.json()

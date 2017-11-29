@@ -4,4 +4,4 @@ from google import google_search
 from youtube import youtube_search
 
 
-print youtube_search('cats')
+print google_search('cats')
