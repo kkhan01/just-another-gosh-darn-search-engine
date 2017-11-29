@@ -10,7 +10,7 @@ def youtube_search(search):
         key = row.get('API')
         if search_type == 'TasteDive':
             use_key = key
-    api_url = "https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.channels.list?"
+    api_url = "https://www.googleapis.com/youtube/v3/search?"
     payload = { 'part' : 'snippet',
                 'q' : search,
                 'type' : 'video',
@@ -18,4 +18,12 @@ def youtube_search(search):
                 'key' : key}
     result = requests.get(api_url, params=payload)
     result = result.json()
-    return result
+    ret = []
+    for video in result['items']:
+        sub = {}
+        url = 'www.youtube.com/watch?v=' + video['id']['videoId']
+        sub['title'] = video['snippet']['title']
+        sub['description'] = video['snippet']['description']
+        sub['url'] = url
+        ret.append(sub)
+    return ret
