@@ -15,9 +15,10 @@ def google_search(search):
                 'q' : search}
     r = requests.get(api_url, params=payload)
     return r.json()
-    '''ret = []
+    ret = []
     for thing in dictionary:
         items = result['items']
         sub = [items['title'], items['snippet'], items['link']]
         ret.append(sub)
-    return ret'''
+    return ret
+
