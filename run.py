@@ -36,14 +36,7 @@ def route_results():
     session.pop('result', None)
     search_type = session['search_type']
     session.pop('search_type', None)
-    if search_type == 'google':
-        return render_template('google.html', results = result)
-    if search_type == 'tastedive':
-        return render_template('tastedive.html', results = result)
-    if search_type == 'youtube':
-        return render_template('youtube.html', results = result)
-    if search_type == 'news':
-        return render_template('news.html', results = result)
+    return render_template('youtube.html', results = result)
 
 if __name__ == "__main__":
     run.debug = True
