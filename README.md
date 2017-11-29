@@ -6,6 +6,15 @@ you can enter a search term and select where you want your search query to go.
 
 ## Instructions:
 
+#### API key file instructions:
+
+1. Check your email for a file from 'klin12@stuy.edu' with the subject title `API Key for JAGDSE`
+2. Download the API key csv file
+3. Place the API key csv file in the root directory of this project (`./just-another-gosh-darn-search-engine`)
+4. You're set to run the project
+
+#### After having API key file in place:
+
 1. Navigate to the root folder of our project in the terminal
 2. Enter the command `python run.py` (assuming you have all the prerequisites already installed).
 3. In your web browser, navigate to the `localhost:5000` url.
@@ -19,7 +28,7 @@ you can enter a search term and select where you want your search query to go.
 
 #### Dependencies:
 
-* flask python module
+* flask, requests, csv, codec python modules
 * python
 * a web browser
 * an internet connection to clone the repo and to run the search
