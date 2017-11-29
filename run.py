@@ -1,6 +1,9 @@
+import os
 from flask import Flask, render_template, session, redirect, url_for, request, flash
+from utils import tastedive, google, youtube, news
 
 run = Flask(__name__)
+run.secret_key = os.urandom(32)
 
 @run.route('/')
 def route_root():
@@ -12,29 +15,35 @@ def route_about():
 
 @run.route('/getresults')
 def route_getresults():
-    search_type = request.form["search-dest"]
-    search = request.form["search-term"]
+    search_type = request.args["search-dest"]
+    search = request.args["search-term"]
     ret = []
     if search_type == 'google':
-        ret = google.search(search)
+        ret = google.google_search(search)
     if search_type == 'tastedive':
-        ret = tastedive.search(search)
+        ret = tastedive.tastedive_search(search)
     if search_type == 'youtube':
-        ret = youtube.search(search)
+        ret = youtube.youtube_search(search)
     if search_type == 'news':
-        ret = news.search(search)
-    return redirect( url_for(route_results) , result = ret, search_type = search_type)
-
+        ret = news.news_search(search)
+    session['result'] = ret
+    session['search_type'] = search_type
+    return redirect(url_for('route_results'))
+ 
 @run.route('/results')
 def route_results():
+    result = session['result']
+    session.pop('result', None)
+    search_type = session['search_type']
+    session.pop('search_type', None)
     if search_type == 'google':
-        return render_template('google.html', result = result)
+        return render_template('google.html', results = result)
     if search_type == 'tastedive':
-        return render_template('tastedive.html', result = result)
+        return render_template('tastedive.html', results = result)
     if search_type == 'youtube':
-        return render_template('youtube.html', result = result)
+        return render_template('youtube.html', results = result)
     if search_type == 'news':
-        return render_template('news.html', result = result)
+        return render_template('news.html', results = result)
 
 if __name__ == "__main__":
     run.debug = True

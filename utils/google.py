@@ -9,16 +9,12 @@ def google_search(search):
         key = row.get('API')
         if search_type == 'Google':
             use_key = key
-    api_url = "http://www.google.com/customsearch/v1"
+    api_url = 'https://www.googleapis.com/customsearch/v1'
     payload = { 'key' : use_key,
-                'cx' : '001172072688314740745:fwbcfymikgm',
+                'cx' : open('cx.txt','r'),
                 'q' : search}
     r = requests.get(api_url, params=payload)
-    return r.json()
+    r = r.json()
     ret = []
-    for thing in dictionary:
-        items = result['items']
-        sub = [items['title'], items['snippet'], items['link']]
-        ret.append(sub)
-    return ret
-
+    return r
+>>>>>>> c88309bf0fe3ad24ca0bf76ebc0baba917989980

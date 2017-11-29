@@ -43,3 +43,18 @@ Updated Search Destinations
 khinshanK -- 2017-11-28 19:27:59
 made a google-esque format
 
+yuqiW -- 2017-11-18 20:51:13
+updated the return type of google and youtube search
+
+yuqiW -- 2017-11-18 11:15:48
+finalized news_search
+
+yuqiW -- 2017-11-18 11:49:17
+finalized tastedive_search
+
+yuqiW -- 2017-11-19 00:12:33
+finalized news_search
+
+khinshanK -- 2017-11-29 00:01:04
+news format mmay follow google for now. need routes working, but im majorly confused
+

@@ -12,6 +12,16 @@ def tastedive_search(search):
     api_url = "https://tastedive.com/api/similar"
     payload = {'k' : use_key, 'q' : search}
     r = requests.get(api_url, params = payload)
-    return r.json()
+    r = r.json()
+    ret = []
+    for suggestion in r['Similar']['Results']:
+        sub = {}
+        url = "www.google.com/search?q=%s" % suggestion['Name']
+        sub['title'] = suggestion['Name']
+        sub['description'] = 'This is a type of ' + suggestion['Type']
+        sub['url'] = url
+        ret.append(sub)
+    return ret
+        
 
     

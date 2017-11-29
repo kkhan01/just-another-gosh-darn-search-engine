@@ -1,7 +1,6 @@
 {% extends 'home.html' %}
 
-{% block r_news %}
-
+{% block r_tastedive %}
 {% for i in results %}
 <span class="gtitle"><h3><a href={{i['url']}}> {{i['title']}} </a></h3></span>
 <p><glink>{{i['url']}}</glink></p>
@@ -9,5 +8,4 @@
 <!-- NEEDS A NEW-Y FORMAT -->
 
 {% endfor %}
-
 {% endblock %}
