@@ -1,6 +1,9 @@
+import os
 from flask import Flask, render_template, session, redirect, url_for, request, flash
 from utils import tastedive, google, youtube, news
+
 run = Flask(__name__)
+run.secret_key = os.urandom(32)
 
 @run.route('/')
 def route_root():
@@ -12,8 +15,8 @@ def route_about():
 
 @run.route('/getresults')
 def route_getresults():
-    search_type = request.form["search-dest"]
-    search = request.form["search-term"]
+    search_type = request.args["search-dest"]
+    search = request.args["search-term"]
     ret = []
     if search_type == 'google':
         ret = google.google_search(search)
@@ -25,7 +28,7 @@ def route_getresults():
         ret = news.news_search(search)
     session['result'] = ret
     session['search_type'] = search_type
-    return redirect(url_for(route_results))
+    return redirect(url_for('route_results'))
  
 @run.route('/results')
 def route_results():
